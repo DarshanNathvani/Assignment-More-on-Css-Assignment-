@@ -1,0 +1,261 @@
+<!-- Task 1: Box Positioning with position: absolute -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Box Positioning</title>
+  <style>
+    .container {
+      position: relative;
+      height: 600px;
+    }
+
+    .box {
+      width: 50px;
+      height: 50px;
+      background-color: #00d1b2;
+      position: absolute;
+      text-align: center;
+      line-height: 50px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .a {
+      left: 200px;
+      top: 200px;
+    }
+
+    .b {
+      left: 200px;  /* same as A */
+      top: 200px;
+      transform: translate(-30px, -30px);
+    }
+
+    .c {
+      left: 200px;
+      top: 200px;
+      transform: translate(30px, -30px);
+    }
+
+    .d {
+      left: 200px;
+      top: 200px;
+      transform: translate(-30px, 30px);
+    }
+
+    .e {
+      left: 200px;
+      top: 200px;
+      transform: translate(30px, 30px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box a">A</div>
+    <div class="box b">B</div>
+    <div class="box c">C</div>
+    <div class="box d">D</div>
+    <div class="box e">E</div>
+  </div>
+
+</body>
+</html>
+
+<!-- Task 2: Absolute vs. Relative Positioning -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Layout</title>
+  <style>
+    .card {
+      width: 90%;
+      max-width: 700px;
+      margin: 30px auto;
+      border: 2px solid black;
+      background-color: #fdf5e6;
+      padding: 20px;
+      overflow: auto;
+    }
+
+    .card img {
+      float: right;
+      width: 200px;
+      height: auto;
+      margin-left: 20px;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: darkgreen;
+    }
+
+    .card p {
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1581349489527-054cb5a98262" alt="Nature">
+    <h2>The Earth!!!</h2>
+    <p>
+      Nature is Earth's masterpiece, a symphony of life composed through millennia. Its landscapes whisper tales
+      of ancient mountains, winding rivers, and flourishing forests, reminding us of the planet's boundless beauty.
+      From delicate petals to towering redwoods, nature's artistry stirs awe and reconnects us to the essence of
+      existence. Nature is Earth's masterpiece, a symphony of life composed through millennia. Its landscapes
+      whisper tales of ancient mountains, winding rivers, and flourishing forests.
+    </p>
+  </div>
+
+</body>
+</html>
+
+<!-- Task 3: Float-based Card Layout -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Layout</title>
+  <style>
+    .card {
+      width: 90%;
+      max-width: 700px;
+      margin: 30px auto;
+      border: 2px solid black;
+      background-color: #fdf5e6;
+      padding: 20px;
+      overflow: auto;
+    }
+
+    .card img {
+      float: right;
+      width: 200px;
+      height: auto;
+      margin-left: 20px;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: darkgreen;
+    }
+
+    .card p {
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1581349489527-054cb5a98262" alt="Nature">
+    <h2>The Earth!!!</h2>
+    <p>
+      Nature is Earth's masterpiece, a symphony of life composed through millennia. Its landscapes whisper tales
+      of ancient mountains, winding rivers, and flourishing forests, reminding us of the planet's boundless beauty.
+      From delicate petals to towering redwoods, nature's artistry stirs awe and reconnects us to the essence of
+      existence. Nature is Earth's masterpiece, a symphony of life composed through millennia. Its landscapes
+      whisper tales of ancient mountains, winding rivers, and flourishing forests.
+    </p>
+  </div>
+
+</body>
+</html>
+
+
+<!-- Task 4:
+Problem Statement
+Create a simple header that sticks to the top of a webpage upon scrolling. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sticky Header</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      background-color: #007BFF;
+      color: white;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .content {
+      padding: 20px;
+      height: 2000px; /* For scroll effect */
+      background: linear-gradient(white, lightgray);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h2>Sticky Header</h2>
+  </div>
+
+  <div class="content">
+    <p>Scroll down to see the sticky header effect.</p>
+    <p>The header will remain at the top as you scroll.</p>
+    <!-- Add more content to demonstrate scrolling -->
+  </div>
+
+</body>
+</html>
+
+<!-- Task : 5
+ Problem Statement
+Explain the z-index, with a code example. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>z-index Example</title>
+  <style>
+    .box {
+      width: 150px;
+      height: 150px;
+      position: absolute;
+    }
+
+    .box1 {
+      background-color: red;
+      top: 50px;
+      left: 50px;
+      z-index: 1;
+    }
+
+    .box2 {
+      background-color: green;
+      top: 100px;
+      left: 100px;
+      z-index: 2;
+    }
+
+    .box3 {
+      background-color: blue;
+      top: 150px;
+      left: 150px;
+      z-index: 3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box box1">z-index 1</div>
+  <div class="box box2">z-index 2</div>
+  <div class="box box3">z-index 3</div>
+
+</body>
+</html>
