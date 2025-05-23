@@ -1,0 +1,359 @@
+<!-- Q1: Difference between CSS Flexbox and CSS Grid
+Feature	Flexbox	Grid
+Layout type	One-dimensional (row or column)	Two-dimensional (row and column)
+Best for	Aligning items in a single line	Complex layouts involving rows and columns
+Item control	Good for content-driven layouts	Good for layout-driven designs
+When to use	Navigation bars, toolbars, cards	Page layout, image galleries, dashboards
+
+✅ Q2: Flexbox Key Properties
+justify-content: Aligns items horizontally in the container (main axis).
+
+Example: justify-content: center | space-between | flex-start
+
+align-items: Aligns items vertically (cross axis).
+
+Example: align-items: center | flex-start | stretch
+
+gap: Adds spacing between items inside a flex container.
+
+Example: gap: 20px;
+
+flex-direction: Sets the main axis direction.
+
+Example: flex-direction: row | column | row-reverse | column-reverse
+
+flex-wrap: Allows items to wrap to next line if they overflow.
+
+Example: flex-wrap: wrap | nowrap
+
+✅ Q3: Center a Div Using Flexbox -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Center with Flexbox</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: lime;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box"></div>
+  </div>
+</body>
+</html>
+
+<!-- Q4: Build a Pricing Section (Based on Figma Design) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pricing Plans</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .pricing-section {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      text-align: center;
+      width: 260px;
+    }
+
+    .card h2 {
+      margin-top: 0;
+    }
+
+    .price {
+      font-size: 32px;
+      margin: 10px 0;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .features li {
+      margin: 10px 0;
+    }
+
+    .btn {
+      background: #0052cc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background: #003d99;
+    }
+
+    .highlight {
+      background: #1b1f3a;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<div class="pricing-section">
+  <div class="card">
+    <h2>Free Plan</h2>
+    <p class="price">$0</p>
+    <ul class="features">
+      <li>1 user</li>
+      <li>4 Web mails</li>
+      <li>Responsive Website</li>
+      <li>Free SSL</li>
+    </ul>
+    <button class="btn">Subscribe now</button>
+  </div>
+
+  <div class="card highlight">
+    <h2>Basic Plan</h2>
+    <p class="price">$29</p>
+    <ul class="features">
+      <li>4 users</li>
+      <li>10 Web mails</li>
+      <li>Responsive Website</li>
+      <li>Free SSL</li>
+    </ul>
+    <button class="btn">Subscribe now</button>
+  </div>
+
+  <div class="card">
+    <h2>Pro Plan</h2>
+    <p class="price">$49</p>
+    <ul class="features">
+      <li>Unlimited users</li>
+      <li>Unlimited Web mails</li>
+      <li>Responsive Website</li>
+      <li>Free SSL + SEO</li>
+    </ul>
+    <button class="btn">Subscribe now</button>
+  </div>
+</div>
+
+</body>
+</html>
+
+<!-- ✅ Q5: Clone IRCTC Ticket Booking Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IRCTC Ticket Booking Clone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .booking-box {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+
+    .booking-box h2 {
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: green;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .input-group input,
+    .input-group select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .search-btn {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .search-btn:hover {
+      background-color: #218838;
+    }
+
+    .image-box img {
+      max-width: 500px;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .header {
+      background-color: #003366;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header h1 {
+      font-size: 24px;
+    }
+
+    .header-buttons button {
+      margin-left: 10px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 4px;
+      background-color: orange;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .header-buttons button:hover {
+      background-color: darkorange;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .image-box img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Indian Railways</h1>
+    <div class="header-buttons">
+      <button>Login</button>
+      <button>Register</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="booking-box">
+      <h2>Book Ticket</h2>
+      <div class="subtitle">Safety &nbsp;&nbsp; Security &nbsp;&nbsp; Punctuality</div>
+
+      <div class="input-group">
+        <label for="from">From</label>
+        <input type="text" id="from" placeholder="e.g. Bangalore">
+      </div>
+
+      <div class="input-group">
+        <label for="to">To</label>
+        <input type="text" id="to" placeholder="e.g. Kasaragod">
+      </div>
+
+      <div class="input-group">
+        <label for="date">Date of Journey</label>
+        <input type="date" id="date">
+      </div>
+
+      <div class="input-group">
+        <label for="class">Class</label>
+        <select id="class">
+          <option>3A</option>
+          <option>2A</option>
+          <option>SL</option>
+          <option>CC</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="quota">Quota</label>
+        <select id="quota">
+          <option>GENERAL</option>
+          <option>TATKAL</option>
+          <option>LADIES</option>
+        </select>
+      </div>
+
+      <button class="search-btn">Search Train</button>
+    </div>
+
+    <div class="image-box">
+      <img src="https://www.irctc.co.in/nget/assets/images/PNR-enquiry.jpg" alt="Train Image">
+    </div>
+  </div>
+
+</body>
+</html>
