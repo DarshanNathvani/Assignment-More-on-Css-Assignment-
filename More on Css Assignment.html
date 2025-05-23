@@ -1,0 +1,293 @@
+
+<!-- 1. Navigation Bar with 5 Items and Hover Effect -->
+ <!-- 5 items: Home, About Us, Contact, Blog, Login -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .navbar {
+      background-color: #6495ED;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .navbar a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: inline-block;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#">Home</a>
+  <a href="#">About Us</a>
+  <a href="#">Contact</a>
+  <a href="#">Blog</a>
+  <a href="#">Login</a>
+</div>
+
+</body>
+</html>
+
+
+<!-- 2. Centered Div with Image and Paragraph -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .centered-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+    }
+    .card {
+      text-align: center;
+      border: 2px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 12px #aaa;
+      max-width: 300px;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="centered-card">
+  <div class="card">
+    <img src="https://via.placeholder.com/300x200" alt="Card Image">
+    <p><strong>Course Name:</strong> PW Skills full stack web development</p>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+<!-- 3. Navigation Bar with Different Border Styles for Each Item -->
+
+
+<div class="navbar">
+  <a href="#" style="border: 2px solid red;">Home</a>
+  <a href="#" style="border: 2px dotted blue;">About Us</a>
+  <a href="#" style="border: 2px dashed green;">Contact</a>
+  <a href="#" style="border: 2px double orange;">Blog</a>
+  <a href="#" style="border: 2px groove purple;">Login</a>
+</div>
+
+
+<!-- 4. Circular Image Using Border Radius -->
+
+
+
+<img src="https://via.placeholder.com/200" style="border-radius: 50%; width: 200px;" alt="Circular Image">
+
+---
+
+<!-- 5. Google Fonts Blog Page -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&display=swap" rel="stylesheet">
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+    }
+    h1 {
+      font-family: 'Oswald', sans-serif;
+    }
+    p {
+      font-family: 'Montserrat', sans-serif;
+      width: 60%;
+      margin: 20px auto;
+    }
+    img {
+      width: 200px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Google Fonts Example</h1>
+<img src="https://via.placeholder.com/200" alt="Google Fonts">
+<p>This paragraph is styled using the Montserrat font. We are showcasing how to use Google Fonts in a simple blog layout.</p>
+
+</body>
+
+<!-- 6. the task is to create a simple "About Us" webpage that contains -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - PW Skills</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      width: 80%;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .about-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>About Us</h1>
+    <p>
+      PW Skills’ mission is to permeate through every student/professional’s outlook towards jobs and change their
+      attitude and perspective from “How Can I Do It?” to “Of Course I Can Do It”. We aim to do this by providing exceptional
+      upskilling courses at affordable rates, while being tech-forward so anyone, anywhere can access and improve their
+      ability to be successful in life.
+    </p>
+    <img class="about-img" src="https://pwskills.com/images/about-us-banner.jpg" alt="PW Skills Event">
+  </div>
+
+</body>
+</html>
+
+<!-- Question 7: Hover Card with Opacity -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hover Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      background-color: #f0f0f0;
+      flex-direction: column;
+    }
+
+    .card {
+      width: 400px;
+      border: 2px solid black;
+      border-radius: 10px;
+      overflow: hidden;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover {
+      opacity: 1;
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    .card p {
+      margin: 10px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="https://pwskills.com/images/web-dev-card.png" alt="Web Development Card">
+    <p>Course Name: PW SKills web development</p>
+  </div>
+
+</body>
+</html>
+
+<!-- 8.Styled Requirements List -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Requirements List</title>
+  <style>
+    .container {
+      width: 60%;
+      margin: 40px auto;
+      padding: 20px;
+      border: 2px solid black;
+      font-family: Georgia, serif;
+    }
+
+    .container h2 {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .container ol {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Requirements</h2>
+    <ol type="i">
+      <li>System with minimum i3 processor or better.</li>
+      <li>At least 4 GB of RAM.</li>
+      <li>Working internet connection.</li>
+      <li>Dedication to learn</li>
+    </ol>
+  </div>
+
+</body>
+</html>
+
+
